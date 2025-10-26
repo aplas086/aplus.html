@@ -1,0 +1,93 @@
+{
+  "name": "شبكة  لبيب نت  ",
+  "short_name": "شبكة لبيب نت",
+  "description": "تطبيق شبكة  لبيب نت  ",
+  "start_url": "/",
+  "id":"/",
+  "scope": "/",
+  "//": "enable push notifications.",
+  "//": "It is the same for all projects",
+  "gcm_sender_id": "81181497379",
+  "display": "standalone",
+  "display_override": ["standalone"],
+  "background_color": "#600083",
+  "theme_color": "#600083",
+  "protocol_handlers": [
+    {
+      "protocol": "web+captive",
+      "url": "/index.html?var=%s"
+    }
+  ],
+  "icons": [
+    {
+      "src": "icon.html?var=96&dst=96",
+      "sizes": "96x96",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icon.html?var=128&dst=128",
+      "sizes": "128x128",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icon.html?var=256&dst=256",
+      "sizes": "256x256",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icon.html?var=512&dst=512",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "img2/icon.html?var=320&dst=320",
+      "sizes": "320x320",
+      "type": "image/svg+xml",
+      "label": "تطبيق الشبكة "
+    },
+    {
+      "src": "img3/icon.html?var=800&dst=600",
+      "sizes": "800x600",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "تطبيق الشبكة"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "خروج",
+      "url": "/logout?erase-cookie=yes&var=logout",
+      "description": "تسجيل الخروج من الكرت",
+     "icons": [
+        {
+          "src": "logout/icon.html",
+          "type": "image/svg+xml",
+          "sizes": "96x96"
+      }]
+    },
+    {
+      "name": "معلومات الكرت",
+      "url": "/login?var=autologin",
+      "description": "عرض معلومات الكرت",
+     "icons": [
+        {
+          "src": "status/icon.html",
+          "type": "image/svg+xml",
+          "sizes": "96x96"
+      }]
+    },
+    {
+      "name": "النقاط",
+      "url": "/aplus.html",
+      "description": "تسجيل بحساب  اي بلاس",
+     "icons": [
+        {
+          "src": "points/icon.html",
+          "type": "image/svg+xml",
+          "sizes": "96x96"
+      }]
+    }
+  ]
+}

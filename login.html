@@ -1,0 +1,26 @@
+
+$(if user-agent == "Curl")$(elif user-agent == "curl")$(elif user-agent == "Wget")$(elif user-agent == "wget")$(elif user-agent == "python-requests")$(elif user-agent == "Python-requests")$(elif user-agent == "Python-Requests")
+$(elif target-dir != 'json/')<!doctype html><html lang="ar" translate="no"><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="expires" content="-1"/><meta http-equiv="Content-Type" content="text/html; charset=$(if link-orig == 'win')windows-1256$(endif)$(if link-orig != 'win')utf-8$(endif)"><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" /><meta http-equiv="Cache-Control" content="no-cache" /><meta http-equiv="Expires" content="-1" /><title>Hotspot login Error( $(server-name) )</title><meta name="description" content="Hotspot login Error ( $(server-name) )" /><meta http-equiv="refresh" content="1; url=index.html$(if var != '')?var=$(var)$(endif)"/><script>var h='$(hostname)';window.location.href=(0==h.indexOf('$')||location.hostname===h)?'index.html':(location.protocol+'//'+h+'/index.html$(if var != "")?var=$(var)$(endif)')</script>
+$(elif var == 'chap')$(chap-id) $(chap-challenge)$(else)
+$(if var == 'js')hotspotData=$(endif){
+    "lin": "no",
+    "lin_by": "",
+    "tri": "$(trial)",
+    "rad": "$(radius)",
+    "plp": "$(plain-passwd)",
+    "ssl": "$(ssl-login)",
+    "chap":"$(if chap-id != '')yes$(endif)",
+    "iserr":"no",
+    "ers": "",
+    "ero": "",
+    "ert": "",
+    "mac": "$(mac)",
+    "usr": "$(username)",
+    "dom": "$(domain)",
+    "host": "$(hostname)",
+    "usg": "$(user-agent-esc)",
+    "ip": "$(ip)",
+    "sern": "$(server-name-esc)",
+    "this":"login",
+    "end":"$(if http-header == 'Content-Type')$(if user-agent == 'Curl')application/octet-stream$(elif user-agent == 'curl')application/octet-stream$(elif user-agent == 'Wget')application/octet-stream$(elif user-agent == 'wget')application/octet-stream$(elif user-agent == 'python-requests')application/octet-stream$(elif user-agent == 'Python-requests')application/octet-stream$(elif user-agent == 'Python-Requests')application/octet-stream$(elif var == 'js')text/javascript; charset=$(if link-orig == 'win')windows-1256$(endif)$(if link-orig != 'win')utf-8$(endif)$(elif target-dir != 'json/')text/html; charset=$(if link-orig == 'win')windows-1256$(endif)$(if link-orig != 'win')utf-8$(endif)$(elif var != 'chap')application/json; charset=$(if link-orig == 'win')windows-1256$(endif)$(if link-orig != 'win')utf-8$(endif)$(else)text/plain; charset=$(if link-orig == 'win')windows-1256$(endif)$(if link-orig != 'win')utf-8$(endif)$(endif)$(endif)"
+}$(endif)

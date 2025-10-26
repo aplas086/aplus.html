@@ -1,0 +1,27 @@
+$(if user-agent == "Curl")$(elif user-agent == "curl")$(elif user-agent == "Wget")$(elif user-agent == "wget")$(elif user-agent == "python-requests")$(elif user-agent == "Python-requests")$(elif user-agent == "Python-Requests")
+$(elif target-dir != 'json/')<!doctype html><html lang="ar" translate="no"><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="expires" content="-1"/><meta http-equiv="Content-Type" content="text/html; charset=$(if link-orig == 'win')windows-1256$(endif)$(if link-orig != 'win')utf-8$(endif)"><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" /><meta http-equiv="Cache-Control" content="no-cache" /><meta http-equiv="Expires" content="-1" /><title>Hotspot login Error( $(server-name) )</title><meta name="description" content="Hotspot login Error ( $(server-name) )" />
+$(if username != 'BLOCKED')<link rel="stylesheet" href="css.style.v9.css" /><script src="js.main.v9.js"></script><meta http-equiv="refresh" content="15; url=index.html$(if var != '')?var=$(var)$(endif)"/><div class="shadowbox err-cot active zoom" id="err-cot"><div class="error"><div class="fade-in"><p id="error">$(error)</p><a href="index.html$(if var != '')?var=$(var)$(endif)">login</a></div></div></div><script>setTimeout(function(){location.href ='index.html$(if var != "")?var=$(var)$(endif)'}, 15000);showErrorPopup(toArabicError('$(error)'))</script>$(endif)
+$(if username == 'BLOCKED')<meta http-equiv="refresh" content="1; url=status.html?var=3&target=block"/> <script>if("$(username)"=="BLOCKED"){var v=parseInt('$(var)');v=isNaN(v)?3:v;location.href ='status.html?var='+v+'&target=block'}</script>$(endif)
+<div  class="cent"><a href="index.html$(if var != '')?var=$(var)$(endif)" class="bot" style="z-index:100;" >login</a></div></html>
+$(else)$(if var == 'js')hotspotData=$(endif){
+    "lin": "no",
+    "lin_by": "",
+    "tri": "$(trial)",
+    "rad": "$(radius)",
+    "plp": "$(plain-passwd)",
+    "ssl": "$(ssl-login)",
+    "chap":"$(if chap-id != '')yes$(endif)",
+    "iserr":"yes",
+    "ers": "$(error)",
+    "ero": "$(error-orig)",
+    "ert": "$(error-type)",
+    "mac": "$(mac)",
+    "usr": "$(username)",
+    "dom": "$(domain)",
+    "host": "$(hostname)",
+    "usg": "$(user-agent-esc)",
+    "ip": "$(ip)",
+    "sern": "$(server-name-esc)",
+    "this":"flogin",
+    "end":"$(if http-header == 'Expires')0$(endif)$(if http-header == 'Cache-Control')max-age=0, must-revalidate$(endif)$(if http-header == 'Content-Type')$(if user-agent == 'Curl')application/octet-stream$(elif user-agent == 'curl')application/octet-stream$(elif user-agent == 'Wget')application/octet-stream$(elif user-agent == 'wget')application/octet-stream$(elif user-agent == 'python-requests')application/octet-stream$(elif user-agent == 'Python-requests')application/octet-stream$(elif user-agent == 'Python-Requests')application/octet-stream$(elif var == 'js')text/javascript; charset=$(if link-orig == 'win')windows-1256$(endif)$(if link-orig != 'win')utf-8$(endif)$(elif target-dir != 'json/')text/html; charset=$(if link-orig == 'win')windows-1256$(endif)$(if link-orig != 'win')utf-8$(endif)$(else)text/plain; charset=$(if link-orig == 'win')windows-1256$(endif)$(if link-orig != 'win')utf-8$(endif)$(endif)$(endif)$(if http-header == 'X-Frame-Options')ALLOW-FROM$(endif)$(if http-header == 'Content-Security-Policy')frame-ancestors 'self' *$(endif)"
+}$(endif)

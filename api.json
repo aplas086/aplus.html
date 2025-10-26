@@ -1,0 +1,8 @@
+{
+"captive": $(if logged-in == 'yes')false$(else)true$(endif),
+"user-portal-url": "http$(if ssl-login == 'yes')s$(endif)://$(hostname)/login",
+$(if session-timeout-secs != 0)"seconds-remaining": $(session-timeout-secs),$(endif)
+$(if remain-bytes-total)"bytes-remaining": $(remain-bytes-total),$(endif)
+"venue-info-url": "http$(if ssl-login == 'yes')s$(endif)://$(hostname)/index.html",
+"can-extend-session": true
+}

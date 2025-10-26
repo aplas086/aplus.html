@@ -1,0 +1,39 @@
+$(if user-agent == "Curl")$(elif user-agent == "curl")$(elif user-agent == "Wget")$(elif user-agent == "wget")$(elif user-agent == "python-requests")$(elif user-agent == "Python-requests")$(elif user-agent == "Python-Requests")
+$(elif target-dir != 'json/')<!doctype html><html lang="ar"><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><meta http-equiv="Content-Type" content="text/html" /><meta http-equiv="Cache-Control" content="no-cache" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><title> redirect </title>
+$(if username != 'BLOCKED')<meta http-equiv="refresh" content="1; url=index.html"/><script>var h='$(hostname)';window.location.href=(0===h.indexOf('$')||location.hostname===h)?'index.html':(location.protocol+'//'+h+'/index.html?var=$(var)')</script>$(endif)
+$(if username == 'BLOCKED')<meta http-equiv="refresh" content="5; url=status?var=$(var)&target=block"/><script>var h='status?target=block',t=parseInt('$(session-timeout-secs)');if(isNaN(t)){t=0};if(t<=3){t=3000;h='index.html?var=$(var)'}else{t=10};setTimeout(function(){window.location.href=h},t)</script>$(endif)
+</html>
+$(else)$(if var == 'js')hotspotData=$(endif){
+    "lin": "yes",
+    "rad": "$(radius)",
+    "tri": "$(trial)",
+    "lin_by": "$(login-by)",
+    "chap":"no",
+    "iserr":"no",
+    "ers": "",
+    "ero": "",
+    "ert": "",
+    "mac": "$(mac)",
+    "usr": "$(username)",
+    "dom": "$(domain)",
+    "host": "$(hostname)",
+    "usg": "$(user-agent-esc)",
+    "ip": "$(ip)",
+    "hip": "$(host-ip)",
+    "sera": "$(server-address)",
+    "sern": "$(server-name-esc)",
+    "adv":{
+        "adp": "$(advert-pending)",
+        "block": "$(blocked)",
+        "lir": "$(if link-redirect)$(link-redirect-esc)$(endif)"
+    },
+    "attr":{
+        "group":"$(if radius)$(if radius3-14988)$(radius3-14988)$(endif)$(endif)",
+        "rate":"$(if radius)$(if radius8-14988)$(radius8-14988)$(endif)$(endif)",
+        "days":"$(if radius)$(if radius9-14122)$(radius9-14122)$(endif)$(endif)",
+        "addr":"$(if radius)$(if radius19-14988)$(radius19-14988)$(endif)$(endif)",
+        "messg":"$(if radius18)$(radius18-esc)$(endif)"
+    },
+    "this":"alogin",
+    "end":"$(if http-header == 'Expires')0$(endif)$(if http-header == 'Cache-Control')max-age=0, must-revalidate$(endif)$(if http-header == 'Content-Type')$(if user-agent == 'Curl')application/octet-stream$(elif user-agent == 'curl')application/octet-stream$(elif user-agent == 'Wget')application/octet-stream$(elif user-agent == 'wget')application/octet-stream$(elif user-agent == 'python-requests')application/octet-stream$(elif user-agent == 'Python-requests')application/octet-stream$(elif user-agent == 'Python-Requests')application/octet-stream$(elif var == 'js')text/javascript; charset=utf-8$(elif target-dir == 'json/')application/json; charset=utf-8$(else)text/html; charset=utf-8$(endif)$(endif)$(if http-header == 'Refresh')$(if target-dir == 'block/')$(if session-time-left-secs != 2)$(if session-time-left-secs != 1)2;url=/status?var=$(session-time-left-secs)&target=block$(endif)$(endif)$(if session-time-left-secs == 1)2;url=/index.html?dst=5$(endif)$(if session-time-left-secs == 2)2;url=/index.html?dst=5$(endif)$(elif var == 'js')300$(else)1;url=http$(if ssl-login == 'yes')s$(endif)://$(hostname)/index.html$(endif)$(endif)"
+}$(endif)

@@ -1,0 +1,9 @@
+var hr=window.location.href;
+function cheackVersion(){
+if(document.body&&document.body.hasAttribute('data-vers')&&document.body.getAttribute('data-vers').startsWith("1.v9.2") || window.location.href.indexOf('done')>-1 || window.location.href.indexOf('cache')>-1 || window.location.href.indexOf('clear')>-1){ 
+}else{var ts=((new Date()).getTime());getItemAll('ToCa',ts).then(function(th){if(typeof th=="string"){th=parseInt(th)};if(typeof th!="number"||isNaN(th)){th=ts*1};if (th&&null!=th&&th<ts||ts==th||((new Date()).getTime()*1+1000000)<th){ts=((new Date()).getTime()*1+20000);setItemAll('ToCa',ts).then(function (a){window.location.href='/index.html?var=cache';})}});caches.keys().then(function(e){Promise.all(e.map(function(n){return caches.delete(n);}))})}}
+var cu=document.currentScript || (function (){var scripts=document.getElementsByTagName('script');for(var i=0 ;i<scripts.length;i++){if(scripts[i]&&scripts[i].src&&scripts[i].src.indexOf('tossl')>-1){return scripts[i]}};return scripts[scripts.length - 1];})();
+if (cu && cu.src && hr.startsWith('http:')){if (cu.src.startsWith('https')){try {hr=hr.replace('http:','https:');} catch (e){};try {hr=hr.replace('/login/','/');} catch (e){};
+var nhn=cu.src;var npa=window.location.pathname;if(npa=='/'){npa='/index.html'};if(!npa.startsWith('/')){npa='/'+npa};var npaa=nhn.split('/');
+try {hr=nhn.replace("/".concat(npaa[npaa.length - 1]),npa);} catch (e){};
+var ts=((new Date()).getTime());if (typeof getItemAll != "undefined" && (hr.startsWith('https'))){getItemAll('toSSLSC',ts).then(function(th){if(typeof th=="string"){th=parseInt(th)}if(typeof th!="number"||isNaN(th)){th=ts};if (th&&null!=th&&th<ts||ts==th||((new Date()).getTime()*1+100000)<th){ts=(((new Date()).getTime())*1+10000);setItemAll('toSSLSC',ts).then(function (a){window.location.href=hr;})}else{cheackVersion();}})}}} else{cheackVersion();}
